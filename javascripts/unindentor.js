@@ -1,30 +1,71 @@
-var unindentor = function(contentElementList) {
-    for (var i=0; i<contentElementList.length; i++) {
-        var contentElement = contentElementList[i];
-        var lines = contentElement.innerHTML.split('\n');
-        var content = [];
-        var indentation;
-        for (var j=0; j<lines.length; j++) {
-            var line = lines[j];
-            if (typeof indentation != 'string') {
-                var trimmed = line.trim();
-                if (trimmed) {
-                    indentation = line.substr(0, line.indexOf(trimmed[0]));
-                }
-            }
-            if (typeof indentation == 'string') {
-                if (line.startsWith(indentation)) {
-                    line = line.substr(indentation.length);
-                }
-                content.push(line);
-            }
-        }
-        contentElement.innerHTML = content.join('\n');
+(function (root, factory) {
+    if (typeof define === 'function' && define.amd) {
+        define([], factory);
+    } else {
+        root.unindentor = factory(root.b);
     }
-};
+}(this, function () {
+    'use strict';
 
-if (typeof String.prototype.startsWith != 'function') {
-    String.prototype.startsWith = function (str){
-        return this.slice(0, str.length) == str;
-    };
-}
+    function unindentElementList(elementList) {
+        elementList = formatElementList(elementList);
+        for (var i = 0; i < elementList.length; i++) {
+            unindentElement(elementList[i]);
+        }
+    }
+
+    function formatElementList(elementList) {
+        if (typeof elementList == 'string') {
+            elementList = document.querySelectorAll(elementList);
+        }
+        elementList = Array.prototype.slice.call(elementList);
+        return elementList;
+    }
+
+    function unindentElement(element) {
+        element.innerHTML = unindentText(element.innerHTML);
+    }
+
+    function unindentText(text) {
+        var result = [];
+        var indentation = false;
+        var lines = text.split('\n');
+        for (var i = 0; i < lines.length; i++) {
+            var line = lines[i];
+            if (indentation === false) {
+                var indentation = findIndentation(line);
+                if (!indentation) {
+                    continue;
+                }
+            }
+            line = unindentLine(line, indentation);
+            result.push(line);
+        }
+        return result.join('\n');
+    }
+
+    function unindentLine(line, indentation) {
+        if (line.startsWith(indentation)) {
+            line = line.substr(indentation.length);
+        }
+        return line;
+    }
+
+    function findIndentation(line) {
+        var trimmed = line.trim();
+        if (!trimmed) {
+            return false;
+        }
+        return line.substr(0, line.indexOf(trimmed[0]));
+    }
+
+    function startsWith(str, prefix) {
+        return str.slice(0, prefix.length) == prefix;
+    }
+
+    return {
+        unindentElementList: unindentElementList,
+        unindentElement: unindentElement,
+        unindentText: unindentText
+    }
+}));

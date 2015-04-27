@@ -7,14 +7,9 @@ require(
             touch(),
             hash()
         ]);
-        
-        // Initialize code editor 
-        unindentor($$('[contenteditable]'));
-
-        // Useful selector
-        function $$(selector, context) {
-            context = context||document;
-            return Array.prototype.slice.call(context.querySelectorAll(selector), 0);
-        }
     }
 );
+
+require(['unindentor'], function(unindentor){
+    unindentor.unindentElementList('[contenteditable]');
+});
