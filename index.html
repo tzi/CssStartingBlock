@@ -49,41 +49,7 @@
     <section>
         <div class="content">
             <h2>1.A. Le box-model</h2>
-            <div data-source="demo">
-                <style scoped>
-                    .marginBox {
-                        background: #f1ff83;
-                    }
-                    .paddingBox {
-                        background: #887bd7;
-                    }
-                    .contentBox {
-                        background: #9fd8ef;
-                    }
-                </style>
-                <style scoped class="demo__editor" contenteditable>
-                    .paddingBox {
-                        display: inline-block;
-                        padding: 20px;
-                        border: 5px black solid;
-                    }
-                    .contentBox {
-                        width: 200px;
-                        height: 200px;
-                    }
-                </style>
-                <div class="demo__output">
-                    <div class="demo__wrapper">
-                        <div class="marginBox">
-                            <div class="paddingBox">
-                                <div class="contentBox">
-                                    width: 200px;
-                                    height: 200px;
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div data-source="source/box-model.html">
             </div>
         </div>
     </section>
@@ -93,14 +59,12 @@
         <div class="content">
             <h2>1.A. Le box-model</h2>
             <p>Savez-vous ce que va afficher ce script ?</p>
-            <form class="editor" data-source="source/javascript-scope-confilct-problem.js">
-            </form>
         </div>
     </section>
 
 
 </article>
-<script src="javascripts/ace/ace.js"></script>
+<script src="javascripts/editor.js"></script>
 <script data-main="javascripts/presentation" src="javascripts/require.js"></script>
 </body>
 </html>

@@ -8,10 +8,22 @@
     text-align: left;
 }
 
-.demo__editor {
+.demo__code {
     display: block;
     float: left;
     width: 50%;
     white-space: pre;
     font-family: monospace;
+}
+
+.green {
+    background: yellowgreen;
+}
+
+.red {
+    background: tomato;
+}
+
+.blue {
+    background: deepskyblue;
 }
