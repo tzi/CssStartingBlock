@@ -1,0 +1,17 @@
+.demo__output {
+    overflow: hidden;
+    text-align: center;
+}
+
+.demo__wrapper {
+    display: inline-block;
+    text-align: left;
+}
+
+.demo__editor {
+    display: block;
+    float: left;
+    width: 50%;
+    white-space: pre;
+    font-family: monospace;
+}

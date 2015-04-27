@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Stylesheets in starting-block</title>
+    <meta name="viewport" content="initial-scale=1">
+    <link href="stylesheets/presentation.css" rel="stylesheet" type="text/css">
+    <link href="stylesheets/font-awesome.css" rel="stylesheet" type="text/css">
+    <link href="stylesheets/editor.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,400italic,700|Istok+Web:700,400italic" rel="stylesheet" type="text/css">
+    <link href="stylesheets/print.css" rel="stylesheet" type="text/css" media="print">
+</head>
+<body>
+<article>
+
+
+    <section>
+        <div class="content content--card">
+            <h1>Les feuilles de styles</h1>
+            <small class="classy">Dans les starting-block</small>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="content">
+            <h2>Qui suis-je ?</h2>
+            <p>Je suis Thomas ZILLIOX, un web développeur freelance sur Lyon.</p>
+            <ul>
+                <li>Je suis spécialisé dans <b>l'industrialisation du CSS</b> : <br>
+                    Formation, conseil, mise en place d'outils, de bonnes pratiques, etc. ;</li>
+                <li>Je fais aussi du développement JS &amp; PHP ;</li>
+                <li>Je blog <i>(rarement)</i> sur mon site <a href="http://tzi.fr">http://tzi.fr</a> ;</li>
+                <li>Je tweete <i>(plus souvent)</i> sur <a href="https://twitter.com/iamtzi">@iamtzi</a>.</li>
+            </ul>
+            <p>Vous pouvez voir cette présentation en ligne <a href="http://tzi.github.io/presentation-ModulesJavaScript/">http://tzi.github.io/presentation-ModulesJavaScript</a>.
+        </div>
+    </section>
+
+
+    <section>
+        <div class="content content--card">
+            <h2>1. Les éléments block</h2>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="content">
+            <h2>1.A. Le box-model</h2>
+            <div class="demo">
+                <style scoped>
+                    .marginBox {
+                        background: #f1ff83;
+                    }
+                    .paddingBox {
+                        background: #887bd7;
+                    }
+                    .contentBox {
+                        background: #9fd8ef;
+                    }
+                </style>
+                <style scoped class="demo__editor" contenteditable>
+                    .paddingBox {
+                        display: inline-block;
+                        padding: 20px;
+                        border: 5px black solid;
+                    }
+                    .contentBox {
+                        width: 200px;
+                        height: 200px;
+                    }
+                </style>
+                <div class="demo__output">
+                    <div class="demo__wrapper">
+                        <div class="marginBox">
+                            <div class="paddingBox">
+                                <div class="contentBox">
+                                    width: 200px;
+                                    height: 200px;
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="content">
+            <h3>1.B. D'où viennent les conflits ?</h3>
+            <p>Savez-vous ce que va afficher ce script ?</p>
+            <form class="editor" data-source="source/javascript-scope-confilct-problem.js">
+            </form>
+        </div>
+    </section>
+
+
+</article>
+<script src="javascripts/ace/ace.js"></script>
+<script src="javascripts/unindentor.js"></script>
+<script data-main="javascripts/presentation" src="javascripts/require.js"></script>
+</body>
+</html>
