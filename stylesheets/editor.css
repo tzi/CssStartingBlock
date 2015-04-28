@@ -46,6 +46,7 @@
 
 .demo__style {
     display: block;
+    height: 100%;
     padding: 10px 15px;
     
     color: #0d0d19;
