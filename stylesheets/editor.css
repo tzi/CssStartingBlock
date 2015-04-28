@@ -1,38 +1,52 @@
-.demo__output {
-    margin-top: 1em;
+[data-source] {
+    background: #ECEAE9;
+    border: 1px #ccc solid;
+    margin: 0 60px;
+}
+[data-source]:after {
+    content: '';
+    display: table;
+    clear: both;
 }
 
 .demo__code {
-    display: block;
+    display: none;
 
+    color: #888;
     font-size: 80%;
     white-space: pre;
     font-family: monospace;
 }
 
-
-/* Demonstrations */
-.green,
-.red,
-.blue {
-    background: #887bd7;
+.demo__output {
 }
 
+
+/* Demonstrations */
+.green {
+    background: #81AA29;
+}
 .green > .demo__style {
     background: yellowgreen;
 }
 
+.red {
+    background: #CD4D39;
+}
 .red > .demo__style {
     background: tomato;
 }
 
+.blue {
+    background: #00A1D7;
+}
 .blue > .demo__style {
     background: deepskyblue;
 }
 
 .demo__style {
     display: block;
-    padding: 15px 30px;
+    padding: 10px 15px;
     
     color: #0d0d19;
     text-align: left;

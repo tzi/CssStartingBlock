@@ -120,6 +120,16 @@ blockquote small {
     color: white;
 }
 
+.sources {
+    text-align: right;
+    font-size: 80%;
+    font-family: Baskerville;
+    font-style: italic;
+}
+
+.sources a {
+    font-style: normal;
+}
 
 
 /* Utils for content
@@ -145,4 +155,10 @@ section .classyNote {
     color: #FFF;
     background: #111111;
     padding: 1em;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
 }
