@@ -17,8 +17,8 @@
 
     <section>
         <div class="content content--card">
-            <small class="classy">la quête de la ise en page idéale...</small>
-            <h1>2 colonnes en CSS</h1>
+            <small class="classy">la quête de la mise en page idéale...</small>
+            <h1>Faire des colonnes en CSS</h1>
         </div>
     </section>
 
@@ -209,8 +209,10 @@
         <div class="content">
             <h2>2.C. Conclusion</h2>
             <p>
-                Les flottants sont des éléments compliqués à stylisés parce qu'ils n'ont pas d'enpreintes dans le flux.
-                En échange, le support est très bon et très pratique pour réaliser des <b>media objects</b>.
+                Les flottants sont des éléments compliqués à styler parce qu'ils n'ont pas d'enpreintes dans le flux.
+                En échange, le support est très bon.
+                Ils sont à privilégier pour le mise en page d'<b>un nombre déterminé de colonnes avec des tailles connues</b>.
+                Par exemple pour réaliser des <b>media objects</b>.
             </p>
             <img src="images/media-object.jpg" />
         </div>
@@ -226,17 +228,71 @@
 
     <section>
         <div class="content">
-            <h2>3.A. Les tableaux</h2>
-            <p>Les tableaux en CSS sont très facile à utiliser (support IE8+)..</p>
-            <div data-source="source/table--col.html"></div>
+            <h2>3.A. Des colonnes à largeur fluides</h2>
+            <p>Les tableaux en CSS permettent de répartir l'espace entre un nombre indéterminé de colonnes et sans fixé (support IE8+).</p>
+            <div data-source="source/table--col-fluid.html"></div>
         </div>
     </section>
 
 
     <section>
         <div class="content">
-            <h2>1.A. Le box-model</h2>
-            <p>Savez-vous ce que va afficher ce script ?</p>
+            <h2>3.B. Des colonnes à largeur fixes</h2>
+            <p>Les tableaux en CSS permettent également de répartir l'espace à l'aide de poids.</p>
+            <div data-source="source/table--col-fix.html"></div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="content">
+            <h2>3.C. Du responsif</h2>
+            <p>
+                Les colonnes des tableaux peuvent être transformées en lignes.
+                C'est très pratique sur mobile !
+            </p>
+            <div data-source="source/table--mobile.html"></div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="content">
+            <h2>3.D. De la réorganisation</h2>
+            <p>
+                Les lignes des tableaux ensuite être réordonnées.
+            </p>
+            <div data-source="source/table--order.html"></div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="content">
+            <h2>3.D. Conclusion</h2>
+            <p>Les tableaux ont quand-même quelques défauts :</p>
+            <ul>
+                <li>Pas de marges sur les cellules ;</li>
+                <li>Pas de passage à la ligne ;</li>
+                <li>etc.</li>
+            </ul>
+            <p>C'est une technique de mise en page à privilégier lorsque <b>plusieurs colonnes doivent avoir une largeur fluides</b> ou que <b>le nombre de colonnes est indéterminées</b>.</p>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="content">
+            <h2>4. Conclusion</h2>
+            <p>
+                Nous avons vu la mise en page à l'aide de <b>flottants</b> et de <b>tableau CSS</b>.
+                Ils s'agit de deux outils puissants et difficile à maîtriser.
+                Dans notre trousse à outils, nous utilisons également régulièrement :
+            </p>
+            <ul>
+                <li>Les inline-blocks</li>
+                <li>Les flexboxs</li>
+            </ul>
         </div>
     </section>
 
