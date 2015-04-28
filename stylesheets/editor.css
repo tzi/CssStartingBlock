@@ -50,7 +50,7 @@
     
     color: #0d0d19;
     text-align: left;
-    white-space: pre;
+    white-space: pre-wrap;
     font-family: monospace;
     font-size: 80%;
 }
