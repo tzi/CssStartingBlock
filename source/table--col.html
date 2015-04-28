@@ -1,0 +1,31 @@
+<style scoped>
+    * {
+        box-sizing: border-box;
+    }
+</style>
+<style class="demo__style" scoped contenteditable>
+    .red {
+        display: table;
+        table-layout: fixed;
+        width: 100%;
+        vertical-align: top;
+    }
+</style>
+<div class="red">
+    <div class="green">
+        <style class="demo__style" scoped contenteditable>
+            .green {
+                display: table-cell;
+                width: 50%;
+            }
+        </style>
+    </div>
+    <div class="blue">
+        <style class="demo__style" scoped contenteditable>
+            .blue {
+                display: table-cell;
+                width: 50%;
+            }
+        </style>
+    </div>
+</div>
