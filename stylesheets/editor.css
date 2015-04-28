@@ -1,33 +1,41 @@
 .demo__output {
-    overflow: hidden;
-    text-align: center;
+    margin-top: 1em;
 }
 
 .demo__code {
     display: block;
-    float: left;
-    width: 50%;
-    
+
+    font-size: 80%;
     white-space: pre;
     font-family: monospace;
 }
 
 
 /* Demonstrations */
-.green {
+.green,
+.red,
+.blue {
+    background: #887bd7;
+}
+
+.green > .demo__style {
     background: yellowgreen;
 }
 
-.red {
+.red > .demo__style {
     background: tomato;
 }
 
-.blue {
+.blue > .demo__style {
     background: deepskyblue;
 }
 
-.demo__style-watcher {
+.demo__style {
+    display: block;
     padding: 15px 30px;
+    
+    color: #0d0d19;
+    text-align: left;
     white-space: pre;
     font-family: monospace;
     font-size: 80%;

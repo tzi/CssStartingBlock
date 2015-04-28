@@ -1,14 +1,23 @@
 <style scoped>
-    [data-element] {
-        float: left;
-        width: 50%;
-    }
-    [data-element="right"] {
-        float: right;
-    }
-    .alternate [data-element="right"] {
-        border-left: 1px black solid;  
+    .green {
+      border: 0 black solid;
     }
 </style>
-<div class="red" data-element="left" data-at="float;width: =50%;"></div>
-<div class="green" data-element="right" data-at="float;width: =50%;border-left: border-left-width;"></div>
+<div class="red">
+    <style class="demo__style" scoped contenteditable>
+        .red {
+          float: left;
+          width: 50%;
+        }
+    </style>
+</div>
+<div class="green">
+    <style class="demo__style" scoped contenteditable>
+        .green {
+          float: right;
+          width: 50%;
+          border-left-width: 0;
+          padding: 0;
+        }
+    </style>
+</div>

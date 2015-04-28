@@ -33,15 +33,15 @@
         for (var i = 0; i < lines.length; i++) {
             var line = lines[i];
             if (indentation === false) {
-                var indentation = findIndentation(line);
-                if (!indentation) {
+                indentation = findIndentation(line);
+                if (indentation === false) {
                     continue;
                 }
             }
             line = unindentLine(line, indentation);
             result.push(line);
         }
-        return result.join('\n');
+        return rtrim(result.join('\n'));
     }
 
     function unindentLine(line, indentation) {
@@ -61,6 +61,10 @@
 
     function startsWith(str, prefix) {
         return str.slice(0, prefix.length) == prefix;
+    }
+
+    function rtrim(str) {
+        return str.replace(/\s+$/, '');
     }
 
     return {
