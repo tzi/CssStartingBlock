@@ -1,7 +1,14 @@
 <style scoped>
-    div {
-        padding: 50px;
+    [data-element] {
+        float: left;
+        width: 50%;
+    }
+    [data-element="right"] {
+        float: right;
+    }
+    .alternate [data-element="right"] {
+        border-left: 1px black solid;  
     }
 </style>
-<div class="red" data-></div>
-<div class="green"></div>
+<div class="red" data-element="left" data-at="float;width: =50%;"></div>
+<div class="green" data-element="right" data-at="float;width: =50%;border-left: border-left-width;"></div>

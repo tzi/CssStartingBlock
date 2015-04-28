@@ -3,19 +3,17 @@
     text-align: center;
 }
 
-.demo__wrapper {
-    display: inline-block;
-    text-align: left;
-}
-
 .demo__code {
     display: block;
     float: left;
     width: 50%;
+    
     white-space: pre;
     font-family: monospace;
 }
 
+
+/* Demonstrations */
 .green {
     background: yellowgreen;
 }
@@ -26,4 +24,11 @@
 
 .blue {
     background: deepskyblue;
+}
+
+.demo__style-watcher {
+    padding: 15px 30px;
+    white-space: pre;
+    font-family: monospace;
+    font-size: 80%;
 }
