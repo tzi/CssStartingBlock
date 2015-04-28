@@ -141,18 +141,51 @@
     
     <section>
         <div class="content">
-            <h2>2.A. Le flux</h2>
-            <p>Les éléments flotants sont hors flux.</p>
-            <div data-source="source/float--flux.html"></div>
+            <h2>2.A. Le flux entre éléments frères</h2>
+            <p>Les éléments flotants n'ont pas d'empreinte dans le flux pour ses frères.</p>
+            <div data-source="source/float--brother-flux.html"></div>
         </div>
     </section>
 
 
     <section>
         <div class="content">
-            <h2>2.A. Leflux</h2>
+            <h2>2.A. Le flux entre éléments frères</h2>
             <p>On peut rétablir le flux à l'aide de la propriété <q>clear</q>.</p>
-            <div data-source="source/float--clear.html"></div>
+            <div data-source="source/float--brother-clear.html"></div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="content">
+            <h2>2.A. Le flux entre éléments frères</h2>
+            <p>En créant un <b>BFC</b>, on peut créer deux colonnes sans chevauchement.</p>
+            <div data-source="source/float--brother-col.html"></div>
+            <p class="sources">
+                Source <a href="http://www.alsacreations.com/astuce/lire/1543-le-contexte-de-formatage-block-en-css.html">Le contexte de formatage block par Raphaël Goetter</a>.
+            </p>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="content">
+            <h2>2.B. Le flux entre parent et enfant</h2>
+            <p>Les éléments flotants n'ont pas d'empreinte dans le flux pour leur parent.</p>
+            <div data-source="source/float--parent-flux.html"></div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="content">
+            <h2>2.B. Le flux entre parent et enfant</h2>
+            <p>On peut rétablir le flux à l'intérieur du parent, en créant un <b>BFC</b> ou à l'aide d'un <b>pseudo-élément</b>.</p>
+            <div data-source="source/float--parent-clearfix.html"></div>
+            <p class="sources">
+                Source <a href="http://nicolasgallagher.com/micro-clearfix-hack/">Le micro-clearfix de Nicolas Gallagher</a>.
+            </p>
         </div>
     </section>
 
