@@ -17,8 +17,8 @@
 
     <section>
         <div class="content content--card">
-            <h1>Les feuilles de styles</h1>
-            <small class="classy">Dans les starting-block</small>
+            <small class="classy">la quête de la ise en page idéale...</small>
+            <h1>2 colonnes en CSS</h1>
         </div>
     </section>
 
@@ -40,11 +40,11 @@
 
     <section>
         <div class="content content--card">
-            <h2>1. Les éléments block</h2>
+            <h2>1. Dimensioner un élément</h2>
         </div>
     </section>
 
-    
+
     <section>
         <div class="content">
             <h2>1.A. Le box-model</h2>
@@ -54,31 +54,13 @@
             </p>
         </div>
     </section>
-    
+
 
     <section>
         <div class="content">
-            <h2>1.A. Le box-model</h2>
-            <p>Ou pourquoi définir un <q>width: 100%</q> est souvent une mauvaise idée.</p>
+            <h2>1.B. La largeur</h2>
+            <p>Définir un <q>width: 100%</q> est souvent une mauvaise idée.</p>
             <div data-source="source/box-model--block.html"></div>
-        </div>
-    </section>
-
-
-    <section>
-        <div class="content">
-            <h2>1.A. Le box-model</h2>
-            <p>Un box-model qui n'est pas du tout pratique pour la vie des projets.</p>
-            <div data-source="source/box-model--col.html"></div>
-        </div>
-    </section>
-
-
-    <section>
-        <div class="content">
-            <h2>1.A. Le box-model</h2>
-            <p>La solution avec <q>box-sizing</q> (support IE8+).</p>
-            <div data-source="source/box-model--border-box.html"></div>
         </div>
     </section>
 
@@ -110,24 +92,66 @@
         <div class="content">
             <h2>1.D. Les marges</h2>
             <p>
-                Les marges verticales fusionnent :
-                <ul>
-                    <li>avec celles du parent qui n’a pas de contenu textuel, border ou padding.</li>
-                    <li>avec celles des éléments frères.</li>
-                </ul>
+                Attention, les marges en pourcentages sont surprennantes !
             </p>
-            <div data-source="source/block--margin.html"></div>
+            <div data-source="source/block--margin-pourcent.html"></div>
         </div>
     </section>
 
 
     <section>
         <div class="content">
-            <h2>1.E. Alignement</h2>
+            <h2>1.D. Les marges</h2>
+            <p>
+                Les marges verticales fusionnent :
+                <ul>
+                    <li>avec celles du parent qui n’a pas de contenu textuel, border ou padding.</li>
+                    <li>avec celles des éléments frères.</li>
+                </ul>
+            </p>
+            <div data-source="source/block--margin-merge.html"></div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="content">
+            <h2>1.D. Les marges</h2>
             <p>
                 Les marges peuvent servir à positionner horizontalement un élément block à l'intérieur d'un autre.
             </p>
-            <div data-source="source/block--alignement.html"></div>
+            <div data-source="source/block--margin-alignement.html"></div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="content">
+            <h2>1.E. Le box-sizing</h2>
+            <p>Un box-model qui n'est pas du tout pratique pour la vie des projets.</p>
+            <div data-source="source/box-model--col.html"></div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="content">
+            <h2>1.E. Le box-sizing</h2>
+            <p>La solution avec <q>box-sizing</q> (support IE8+).</p>
+            <div data-source="source/box-model--border-box.html"></div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="content">
+            <h2>1.F. Conclusion</h2>
+            <ul>
+                <li>Toujours utiliser <q>box-sizing: border-box</q> ;</li>
+                <li>Les éléments block ont un flux seulement vertical ;</li>
+                <li>Il vaut mieux privilégier le padding au margin pour éviter les fusions ;</li>
+                <li>Il vaut mieux éviter les hauteurs et les marges en pourcentage.</li>
+            </ul>
         </div>
     </section>
 
@@ -144,15 +168,6 @@
             <h2>2.A. Le flux entre éléments frères</h2>
             <p>Les éléments flotants n'ont pas d'empreinte dans le flux pour ses frères.</p>
             <div data-source="source/float--brother-flux.html"></div>
-        </div>
-    </section>
-
-
-    <section>
-        <div class="content">
-            <h2>2.A. Le flux entre éléments frères</h2>
-            <p>On peut rétablir le flux à l'aide de la propriété <q>clear</q>.</p>
-            <div data-source="source/float--brother-clear.html"></div>
         </div>
     </section>
 
@@ -181,6 +196,37 @@
     <section>
         <div class="content">
             <h2>2.B. Le flux entre parent et enfant</h2>
+            <p>On peut rétablir le flux à l'intérieur du parent, en créant un <b>BFC</b> ou à l'aide d'un <b>pseudo-élément</b>.</p>
+            <div data-source="source/float--parent-clearfix.html"></div>
+            <p class="sources">
+                Source <a href="http://nicolasgallagher.com/micro-clearfix-hack/">Le micro-clearfix de Nicolas Gallagher</a>.
+            </p>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="content">
+            <h2>2.C. Conclusion</h2>
+            <p>
+                Les flottants sont des éléments compliqués à stylisés parce qu'ils n'ont pas d'enpreintes dans le flux.
+                En échange, le support est très bon et très pratique pour réaliser des <b>media objects</b>.
+            </p>
+            <img src="images/media-object.jpg" />
+        </div>
+    </section>
+
+
+    <section>
+        <div class="content content--card">
+            <h2>3. Les tableaux</h2>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="content">
+            <h2>3.A. Le flux entre parent et enfant</h2>
             <p>On peut rétablir le flux à l'intérieur du parent, en créant un <b>BFC</b> ou à l'aide d'un <b>pseudo-élément</b>.</p>
             <div data-source="source/float--parent-clearfix.html"></div>
             <p class="sources">
